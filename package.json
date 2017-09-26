@@ -1,0 +1,29 @@
+{
+  "name": "canvas-syncing-assignment-part1",
+  "version": "1.0.0",
+  "description": "syncingdata HW I",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --use_strict ./src/server.js ",
+    "pretest": "eslint ./src --fix",
+    "test": "echo 'complete'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LegendaryBaddie/canvas-syncing-assignment-part1.git"
+  },
+  "author": "Austin White",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LegendaryBaddie/canvas-syncing-assignment-part1/issues"
+  },
+  "homepage": "https://github.com/LegendaryBaddie/canvas-syncing-assignment-part1#readme",
+  "dependencies": {
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}

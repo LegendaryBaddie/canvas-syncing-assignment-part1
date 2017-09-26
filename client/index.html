@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
     <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script type="text/babel" >
         "use strict";
-    
+        
+        let socket;
+
+        const sendMessage = () =>{
+            const pointData = {
+                points: 0.1
+            };
+            socket.emit('pointTick', pointData);
+        }
+        const init = () => {
+            socket = io.connect();
+            sendMessage();
+            socket.on('pointTick', (data) => {
+                document.querySelector('#pointCount').innerHTML = data.message;
+                sendMessage();
+            })  
+        }
+
+        window.onload = init;
     </script>
 </head>
 <body>
-
+    <h2 id="pointCount"></h2>
 </body>
 </html>
